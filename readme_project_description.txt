@@ -108,14 +108,4 @@ A felhasználói felület folyamatosan figyelmeztetni fog, ha az aktuális bankkárty
 - Adatok módosításainál minden esetben a MachineActions() osztályban már elõre megírt metódusain keresztül bekérjük a módosítani kívánt felhasználói adathoz szükséges adatot a felhasználótól, megviszgáljuk, hogy elõre meghatározott kritériumoknak megfelel-e a bevitt adat, ha igen, az adat módosul és errõl értesítjük a felhasználót, ha nem figyelmeztetjük a hibáról, és visszatérünk az adatmódosítás menüpontra.
 
 - Vissza opciónál visszatérünk az elõzõ menüre.
-
-
-MachineActions
-
-getInputBetweenMenuRanges(int, int) metódus adott intervallumok között vár inputot, és ha a DataOperations osztályban már elõre megírt vizsgálatoknak megfelel, visszatér a kívánt számmal. *MachineInterface-ben, menüválasztáskor szükséges.
-
-getCustomNumberInputForTransaciton() metódus bekér inputot, aminek a dataOperations osztályban már elõre megírt metódusoknak ha megfelel, visszatér egy Double értékkel.
-*MachineActions-ben, tranzakció létrehozásakor szükséges
-
-login() függvény összegyûjti a DataOperations osztályban már elõre megírt metódusok segítségével a bejelentkezési adatokat, és leellenõrzi, hogy létezik-e ilyen értékpárral felhasználó. Ha igen, a felhasználó ID-jával visszatér, ha nem, 0-val.
 	
