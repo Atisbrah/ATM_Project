@@ -21,9 +21,9 @@ public class ReadFile {
     private ATMService atmService;
     private DataOperations dataOperations;
 
-    private final String USERFILEPATH = "C:\\Users\\User\\IdeaProjects\\spring_test\\src\\files\\users.csv";
-    private final String LOGINFILEPATH = "C:\\Users\\User\\IdeaProjects\\spring_test\\src\\files\\logins.csv";
-    private final String CREDITCARDFILEPATH = "C:\\Users\\User\\IdeaProjects\\spring_test\\src\\files\\creditcards.csv";
+    private final String USERFILEPATH = "C:\\Users\\User\\IdeaProjects\\ATM_Project\\src\\files\\users.csv";
+    private final String LOGINFILEPATH = "C:\\Users\\User\\IdeaProjects\\ATM_Project\\src\\files\\logins.csv";
+    private final String CREDITCARDFILEPATH = "C:\\Users\\User\\IdeaProjects\\ATM_Project\\src\\files\\creditcards.csv";
 
     @Autowired
     public ReadFile(ATMService atmService, DataOperations dataOperations) {
@@ -71,12 +71,9 @@ public class ReadFile {
                 user.setBirthDate(LocalDate.parse(dataOperations.formatDate(scanner.next())));
                 users.add(user);
             }
-
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         }
-
-
         return users;
     }
 
@@ -94,11 +91,9 @@ public class ReadFile {
                 login.setPassword(scanner.next());
                 logins.add(login);
             }
-
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         }
-
         return logins;
     }
 
@@ -116,11 +111,9 @@ public class ReadFile {
                 creditCard.setCreditCardCompany(scanner.next());
                 creditCards.add(creditCard);
             }
-
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         }
-
         return creditCards;
     }
 }

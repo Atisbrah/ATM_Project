@@ -1,9 +1,6 @@
 package com.example.entities;
 
-import org.springframework.boot.convert.DataSizeUnit;
-
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +31,7 @@ public class CreditCard {
     private Boolean activated = false;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @OneToMany(mappedBy = "creditCard", fetch = FetchType.EAGER, cascade = CascadeType.ALL)

@@ -24,7 +24,7 @@ public class Transaction {
     private Double transactionFee;
 
     @ManyToOne
-    @JoinColumn(name = "cardId")
+    @JoinColumn(name = "card_id")
     private CreditCard creditCard;
 
     public Transaction() {
